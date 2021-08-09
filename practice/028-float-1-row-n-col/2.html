@@ -1,0 +1,23 @@
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .row::before,
+    .row::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .col {
+        float: left;
+        width: 33.33333333%;
+    }
+</style>
+
+<div class="row">
+    <div class="col">yo</div>
+    <div class="col">yo</div>
+    <div class="col">yo</div>
+</div>
