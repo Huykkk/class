@@ -157,6 +157,7 @@
         max-width: 65%;
         margin-left: auto;
         margin-right: auto;
+        overflow: auto;
     }
 
     .text-right {
@@ -180,12 +181,54 @@
     }
 
     .nav {
+        margin-top: 20px;
         color: #fff;
         font-size: 13px;
     }
 
     .nav a {
         color: inherit;
+        padding: 2px 5px;
+        display: inline-block;
+    }
+
+    .nav .auth {
+        font-size: 80%;
+        font-weight: 300;
+    }
+
+    .logo {
+        width: 110px;
+        height: 40px;
+        background-image: url(./lianjia-sprite.png);
+        background-position: -16px -375px;
+    }
+
+    .locale {
+        background: rgba(0, 0, 0, .6);
+        background: #000;
+        border-radius: 15px;
+        display: inline-block;
+        padding: 2px 5px;
+        font-size: 70%;
+    }
+
+    .locale-icon {
+        width: 12px;
+        height: 15px;
+        display: inline-block;
+        background-image: url(./lianjia-sprite.png);
+        background-position: -188px -17px;
+    }
+
+    .logo,
+    .locale {
+        vertical-align: middle;
+    }
+
+
+    .locale>* {
+        vertical-align: top;
     }
 </style>
 
@@ -194,12 +237,14 @@
     <div class="container">
         <div class="row nav">
             <div class="col">
-                <a class="logo" href="#">Logo</a>
-                <span class="locale-icon"></span>
-                <span class="locale">北京</span>
+                <a class="logo" href="#"></a>
+                <span class="locale">
+                    <span class="locale-icon"></span>
+                    <span>北京</span>
+                </span>
             </div>
             <div class="col right text-right">
-                <div class="row">
+                <div class="row auth">
                     <div class="link-group">
                         <a href="#">登录</a>
                         <a href="#">注册</a>
