@@ -33,9 +33,10 @@
     input,
     button {
         border: 1px solid rgba(0, 0, 0, .15);
-        padding: 5px 10px;
+        padding: 10px;
         outline: 0;
         color: #444;
+        border-radius: 3px;
     }
 
     input:focus,
@@ -176,6 +177,19 @@
         float: right;
     }
 
+    .input-group>* {
+        border-radius: 0;
+    }
+
+    .input-group>*:first-child {
+        border-radius: 3px 0 0 3px;
+    }
+
+    .input-group>*:last-child {
+        border-radius: 0 3px 3px 0;
+    }
+
+
     .first-screen {
         background: #666;
     }
@@ -205,11 +219,11 @@
     }
 
     .locale {
-        background: rgba(0, 0, 0, .6);
+        background: rgba(0, 0, 0, .4);
         background: #000;
         border-radius: 15px;
         display: inline-block;
-        padding: 2px 5px;
+        padding: 5px;
         font-size: 70%;
     }
 
@@ -229,6 +243,48 @@
 
     .locale>* {
         vertical-align: top;
+    }
+
+    .centered {
+        margin-top: 70px;
+        text-align: center;
+    }
+
+    #heading {
+        color: #fff;
+        line-height: 1;
+        margin-bottom: 40px;
+    }
+
+    #heading h1 {
+        margin: 0;
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    #heading .sub-heading {
+        font-size: 18px;
+        font-weight: lighter;
+    }
+
+    #search {
+        background: #000;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+    }
+
+    .search-bar {
+        font-size: 0;
+    }
+
+    .search-bar input {
+        width: 80%;
+    }
+
+    .search-bar button {
+        width: 20%;
     }
 </style>
 
@@ -270,11 +326,11 @@
             </div>
         </div>
         <div class="row centered">
-            <div class="heading">
+            <div id="heading">
                 <h1>连接每个家的故事</h1>
                 <div class="sub-heading">北京链家真实在售二手房</div>
             </div>
-            <div class="search">
+            <div id="search">
                 <div class="cat-group">
                     <span class="cat">找二手房</span>
                     <span class="cat">找新房</span>
@@ -282,7 +338,7 @@
                     <span class="cat">找小区</span>
                     <span class="cat">搜问答</span>
                 </div>
-                <form class="search-bar">
+                <form class="input-group search-bar">
                     <input type="text" placeholder="请输入区域、小区、经纪人开始找房">
                     <button type="submit">开始找房</button>
                 </form>
