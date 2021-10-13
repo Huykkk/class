@@ -33,16 +33,22 @@
   input,
   button {
     border: 1px solid rgba(0, 0, 0, 0.15);
-    padding: 10px;
+    padding: 15px;
     outline: 0;
     color: #444;
     border-radius: 3px;
     font-size: 15px;
+    line-height: 20px;
+  }
+
+  button.primary {
+    color: #fff;
+    background: #00ae66;
   }
 
   input:focus,
   button:focus {
-    border-color: #037b82;
+    border-color: #00ae66;
   }
 
   .row::before,
@@ -179,6 +185,7 @@
 
   .input-group > * {
     border-radius: 0;
+    border-right-width: 0;
   }
 
   .input-group > *:first-child {
@@ -187,15 +194,16 @@
 
   .input-group > *:last-child {
     border-radius: 0 3px 3px 0;
+    border-right-width: 1px;
   }
 
   .first-screen {
     background: #666;
+    color: #fff;
   }
 
   .nav {
     margin-top: 20px;
-    color: #fff;
     font-size: 13px;
   }
 
@@ -249,7 +257,6 @@
   }
 
   #heading {
-    color: #fff;
     line-height: 1;
     margin-bottom: 40px;
   }
@@ -266,11 +273,36 @@
   }
 
   #search {
-    background: #000;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
     text-align: left;
+    margin-bottom: 120px;
+  }
+
+  #search .cat-group {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  #search .cat {
+    padding: 7px;
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+
+  #search .cat.active {
+    color: #fff;
+  }
+
+  #search .pointer {
+    position: relative;
+    top: 2px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #ffffff transparent;
   }
 
   .search-bar {
@@ -283,6 +315,16 @@
 
   .search-bar button {
     width: 20%;
+  }
+
+  .anno {
+    margin: 20px 0;
+    font-size: 70%;
+  }
+
+  .anno * {
+    color: rgba(0, 0, 0, .5);
+    padding: 10px;
   }
 </style>
 
@@ -329,15 +371,16 @@
       </div>
       <div id="search">
         <div class="cat-group">
-          <span class="cat">找二手房</span>
+          <span class="cat active">找二手房</span>
           <span class="cat">找新房</span>
           <span class="cat">找租房</span>
           <span class="cat">找小区</span>
           <span class="cat">搜问答</span>
         </div>
+        <div class="pointer"></div>
         <form class="input-group search-bar">
           <input type="text" placeholder="请输入区域、小区、经纪人开始找房" />
-          <button type="submit">开始找房</button>
+          <button class="primary" type="submit">开始找房</button>
         </form>
       </div>
     </div>
