@@ -198,7 +198,7 @@
   }
 
   .first-screen {
-    background: url(./first-screen-bg.jpg);
+    background: url(./img/first-screen-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -224,7 +224,7 @@
   .logo {
     width: 110px;
     height: 40px;
-    background-image: url(./lianjia-sprite.png);
+    background-image: url(./img/lianjia-sprite.png);
     background-position: -16px -375px;
   }
 
@@ -241,7 +241,7 @@
     width: 12px;
     height: 15px;
     display: inline-block;
-    background-image: url(./lianjia-sprite.png);
+    background-image: url(./img/lianjia-sprite.png);
     background-position: -188px -17px;
   }
 
@@ -326,8 +326,71 @@
   }
 
   .anno * {
-    color: rgba(255,255,255, .8);
+    color: rgba(255, 255, 255, 0.8);
     padding: 10px;
+  }
+
+  .main > * {
+    padding: 20px 0;
+  }
+
+  .support {
+    text-align: center;
+  }
+
+  .support .thumbnail {
+    padding: 10px 0;
+  }
+
+  .support .thumbnail img {
+    max-width: 100px;
+  }
+
+  .support .detail > * {
+    padding-top: 5px;
+    padding-bottom: 10px;
+  }
+
+  .support .title {
+    font-size: 120%;
+  }
+
+  .support .desc {
+    color: #aaa;
+  }
+
+  .app {
+    background-image: url(./img/bg-app.jpg);
+  }
+
+  .app .left {
+    max-width: 50%;
+  }
+
+  .app .title {
+    font-size: 500%;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .app .sub-title {
+    font-size: 400%;
+    font-weight: lighter;
+  }
+
+  .app .title,
+  .app .sub-title {
+    line-height: 1;
+  }
+
+  .app .desc {
+    color: #666;
+  }
+
+  .app .download button{
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
   }
 </style>
 
@@ -395,49 +458,53 @@
 </div>
 <div class="row main">
   <div class="row">
-    <div class="col col-8">
-      <div class="thumbnail">
-        <img src="http://dummyimage.com/300x300" />
+    <div class="container">
+      <div class="col col-8 support">
+        <div class="thumbnail">
+          <img src="./img/support-1.png" />
+        </div>
+        <div class="detail">
+          <div class="title">找二手房</div>
+          <div class="desc">真实二手房源，链家承诺真实在售所见即真</div>
+        </div>
       </div>
-      <div class="detail">
-        <div class="title">找二手房</div>
-        <div class="desc">真实二手房源，链家承诺真实在售所见即真</div>
+      <div class="col col-8 support">
+        <div class="thumbnail">
+          <img src="./img/support-1.png" />
+        </div>
+        <div class="detail">
+          <div class="title">找二手房</div>
+          <div class="desc">真实二手房源，链家承诺真实在售所见即真</div>
+        </div>
       </div>
-    </div>
-    <div class="col col-8">
-      <div class="thumbnail">
-        <img src="http://dummyimage.com/300x300" />
-      </div>
-      <div class="detail">
-        <div class="title">地图找房</div>
-        <div class="desc">为您精准定位，位置周边配套设施一览无余</div>
-      </div>
-    </div>
-    <div class="col col-8">
-      <div class="thumbnail">
-        <img src="http://dummyimage.com/300x300" />
-      </div>
-      <div class="detail">
-        <div class="title">房屋估价</div>
-        <div class="desc">基于海量成交数据，帮您合理定价预估市场</div>
+      <div class="col col-8 support">
+        <div class="thumbnail">
+          <img src="./img/support-1.png" />
+        </div>
+        <div class="detail">
+          <div class="title">找二手房</div>
+          <div class="desc">真实二手房源，链家承诺真实在售所见即真</div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="row app">
-    <div class="container">
-      <div class="sub-title">一链倾城</div>
-      <div class="title">为你为家</div>
-      <div class="desc">
-        集二手、新房、租房功能于一体，随时随地任性找房。IM匿名咨询让您放心，消息动态推送让您省心，服务承诺让您安心，数据百科锦囊让您感受贴心漫漫找房路，我们努力为您想更多。
-      </div>
-      <div class="row">
-        <div class="col-14">
-          <button>iPhone</button>
-          <button>Android</button>
+  <div class="app">
+    <div class="row container">
+      <div class="col left">
+        <div class="sub-title">一链倾城</div>
+        <div class="title">为你为家</div>
+        <div class="desc">
+          集二手、新房、租房功能于一体，随时随地任性找房。IM匿名咨询让您放心，消息动态推送让您省心，服务承诺让您安心，数据百科锦囊让您感受贴心漫漫找房路，我们努力为您想更多。
         </div>
-        <div class="col col-10">
-          <div class="qrcode">
-            <img src="http://dummyimage.com/300x300" alt="" />
+        <div class="col download">
+          <div class="col col-14">
+            <button class="primary">iPhone</button>
+            <button class="primary">Android</button>
+          </div>
+          <div class="col col-10">
+            <div class="qrcode">
+              <img src="http://dummyimage.com/150x150" alt="" />
+            </div>
           </div>
         </div>
       </div>
